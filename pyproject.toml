@@ -1,6 +1,6 @@
 [project]
 name = "hackerearth-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "Unofficial MCP server: give any AI assistant a code run button via HackerEarth's code execution API"
 readme = "README.md"
 license = { text = "MIT" }
@@ -9,6 +9,9 @@ dependencies = [
     "fastmcp>=2.0",
     "requests>=2.31",
 ]
+
+[project.scripts]
+hackerearth-mcp = "server:main"
 
 [tool.setuptools]
 py-modules = ["server"]

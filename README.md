@@ -3,7 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![MCP Compatible](https://img.shields.io/badge/MCP-compatible-green.svg)](https://modelcontextprotocol.io/)
-[![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)](https://github.com/pratham-jain33/hackerearth-mcp/releases)
+[![Version](https://img.shields.io/badge/version-v0.2.0-orange.svg)](https://github.com/pratham-jain33/hackerearth-mcp/releases)
+[![PyPI](https://img.shields.io/pypi/v/hackerearth-mcp.svg)](https://pypi.org/project/hackerearth-mcp/)
 [![Stars](https://img.shields.io/github/stars/pratham-jain33/hackerearth-mcp.svg)](https://github.com/pratham-jain33/hackerearth-mcp/stargazers)
 [![Tests](https://github.com/pratham-jain33/hackerearth-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/pratham-jain33/hackerearth-mcp/actions)
 
@@ -30,6 +31,20 @@ Register a client in the [HackerEarth developer dashboard](https://www.hackerear
 
 **2. Install**
 
+No cloning needed:
+
+```bash
+uvx hackerearth-mcp
+```
+
+or with pip:
+
+```bash
+pip install hackerearth-mcp
+```
+
+From source instead:
+
 ```bash
 git clone https://github.com/pratham-jain33/hackerearth-mcp
 cd hackerearth-mcp
@@ -43,6 +58,22 @@ Claude Desktop config file:
 
 - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "hackerearth": {
+      "command": "uvx",
+      "args": ["hackerearth-mcp"],
+      "env": {
+        "HACKEREARTH_KEY": "paste-your-client-secret-here"
+      }
+    }
+  }
+}
+```
+
+From source, point at your checkout instead:
 
 ```json
 {
@@ -95,8 +126,8 @@ Claude: [calls run_code with your function]
 ## Roadmap
 
 - [x] v0.1 — code submission, status polling, output download, compile/runtime error reporting, 24-language list
-- [ ] PyPI packaging — install and run with a single `uvx hackerearth-mcp` command
-- [ ] Submissions to the official MCP registry and community directories
+- [x] v0.2 — PyPI packaging, install and run with a single `uvx hackerearth-mcp` command, `server.json` for the official MCP registry
+- [ ] Submission to the official MCP registry and community directories
 
 ## Contributing
 

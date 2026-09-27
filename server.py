@@ -316,5 +316,10 @@ def list_languages() -> str:
 # file, it talks to the server through standard input/output. That's all
 # this one line does: open for business.
 # ---------------------------------------------------------------------------
-if __name__ == "__main__":
+def main() -> None:
+    """Entry point for the `hackerearth-mcp` console script (pip/uvx installs)."""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
