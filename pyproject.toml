@@ -1,6 +1,6 @@
 [project]
 name = "hackerearth-mcp"
-version = "0.2.0"
+version = "0.2.1"
 description = "Unofficial MCP server: give any AI assistant a code run button via HackerEarth's code execution API"
 readme = "README.md"
 license = { text = "MIT" }
