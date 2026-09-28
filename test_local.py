@@ -15,7 +15,8 @@ EXPECTED_RUN_CODE_DESC = (
     "Executes a snippet of code on HackerEarth's cloud servers in any of 24 languages. "
     "Use when the user wants to test code, see real output instead of predicted output, "
     "or check whether a program works. Needs the code and the language identifier, "
-    "call list_languages if unsure of the exact name. Returns the program's printed "
+    "call list_languages if unsure of the exact name. Requires HACKEREARTH_KEY to be set; "
+    "every run consumes the key owner's HackerEarth API quota. Returns the program's printed "
     "output and any error messages."
 )
 EXPECTED_LIST_DESC = (

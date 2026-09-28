@@ -5,7 +5,7 @@ mcp-name: io.github.pratham-jain33/hackerearth-mcp
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![MCP Compatible](https://img.shields.io/badge/MCP-compatible-green.svg)](https://modelcontextprotocol.io/)
-[![Version](https://img.shields.io/badge/version-v0.2.1-orange.svg)](https://github.com/pratham-jain33/hackerearth-mcp/releases)
+[![Version](https://img.shields.io/badge/version-v0.2.2-orange.svg)](https://github.com/pratham-jain33/hackerearth-mcp/releases)
 [![PyPI](https://img.shields.io/pypi/v/hackerearth-mcp.svg)](https://pypi.org/project/hackerearth-mcp/)
 [![Stars](https://img.shields.io/github/stars/pratham-jain33/hackerearth-mcp.svg)](https://github.com/pratham-jain33/hackerearth-mcp/stargazers)
 [![Tests](https://github.com/pratham-jain33/hackerearth-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/pratham-jain33/hackerearth-mcp/actions)

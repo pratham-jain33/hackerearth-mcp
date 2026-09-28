@@ -160,7 +160,7 @@ def _check_api_error(data: dict) -> str | None:
 
 @mcp.tool()
 def run_code(code: str, language: str) -> str:
-    """Executes a snippet of code on HackerEarth's cloud servers in any of 24 languages. Use when the user wants to test code, see real output instead of predicted output, or check whether a program works. Needs the code and the language identifier, call list_languages if unsure of the exact name. Returns the program's printed output and any error messages."""
+    """Executes a snippet of code on HackerEarth's cloud servers in any of 24 languages. Use when the user wants to test code, see real output instead of predicted output, or check whether a program works. Needs the code and the language identifier, call list_languages if unsure of the exact name. Requires HACKEREARTH_KEY to be set; every run consumes the key owner's HackerEarth API quota. Returns the program's printed output and any error messages."""
     # -- Step 0: do we even have a key? No key, no kitchen call. --
     api_key = _get_api_key()
     if not api_key:
