@@ -10,6 +10,8 @@ mcp-name: io.github.pratham-jain33/hackerearth-mcp
 [![Stars](https://img.shields.io/github/stars/pratham-jain33/hackerearth-mcp.svg)](https://github.com/pratham-jain33/hackerearth-mcp/stargazers)
 [![Tests](https://github.com/pratham-jain33/hackerearth-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/pratham-jain33/hackerearth-mcp/actions)
 
+Also listed on [Glama](https://glama.ai/mcp/servers/pratham-jain33/hackerearth-mcp) with one-click deploy.
+
 Give any AI assistant a code **run button**.
 
 > **Unofficial community project.** Not made by, endorsed by, or affiliated with HackerEarth. You bring your own free HackerEarth API key.
@@ -124,6 +126,12 @@ You:    Is this Fibonacci function correct? Run it and show me the first 10 numb
 Claude: [calls run_code with your function]
         It works. The output is: 0 1 1 2 3 5 8 13 21 34
 ```
+
+## Roadmap
+
+- [x] v0.1 — code submission, status polling, output download, compile/runtime error reporting, 24-language list
+- [x] v0.2 — PyPI packaging, install and run with a single `uvx hackerearth-mcp` command, `server.json` for the official MCP registry
+- [x] Published to the official MCP registry and [Glama](https://glama.ai/mcp/servers/pratham-jain33/hackerearth-mcp); submitted to [awesome-mcp](https://github.com/punkpeye/awesome-mcp-servers/pull/15236)
 
 ## Contributing
 
