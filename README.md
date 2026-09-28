@@ -125,12 +125,6 @@ Claude: [calls run_code with your function]
         It works. The output is: 0 1 1 2 3 5 8 13 21 34
 ```
 
-## Roadmap
-
-- [x] v0.1 — code submission, status polling, output download, compile/runtime error reporting, 24-language list
-- [x] v0.2 — PyPI packaging, install and run with a single `uvx hackerearth-mcp` command, `server.json` for the official MCP registry
-- [ ] Submission to the official MCP registry and community directories
-
 ## Contributing
 
 Issues and pull requests are welcome. If you add a tool, write its description the way you'd explain it to a smart friend who has never seen it — the assistant reads that text to decide when to use it.
