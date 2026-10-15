@@ -27,6 +27,40 @@ AI assistants are great at writing code and terrible at knowing whether it works
 | `run_code` | Sends code plus a language to HackerEarth, waits for it to run, and returns the printed output and any error messages. |
 | `list_languages` | Lists every language HackerEarth can run, with the exact identifiers to pass to `run_code`. Takes no inputs. |
 
+
+## Installation
+```bash
+# Quick install via uvx (recommended)
+uvx hackerearth-mcp
+```
+```bash
+# Or install with pip
+pip install hackerearth-mcp
+```
+```bash
+# Install from source
+git clone https://github.com/pratham-jain33/hackerearth-mcp
+cd hackerearth-mcp
+python -m venv .venv
+.venv/bin/pip install -e .
+```
+
+
+## Features
+- Exposes two MCP tools: `run_code` and `list_languages`.
+- Executes code in 24 programming languages via HackerEarth's sandboxed cloud servers.
+- Provides friendly language aliases (e.g., `python` → `PYTHON3`).
+- Returns real program output and error messages.
+- Gracefully handles missing `HACKEREARTH_KEY` and unknown languages without making network calls.
+- Lists all supported language identifiers.
+- Simple installation via `uvx` or `pip`.
+- Compatible with any MCP‑compatible AI assistant (Claude Desktop, Cursor, etc.).
+
+
+## Tech/framework used
+- Language: Python (>=3.10)
+- Core libraries: [FastMCP](https://pypi.org/project/fastmcp/) (provides MCP server framework), [requests](https://pypi.org/project/requests/) (HTTP client)
+
 ## Quickstart
 
 **1. Get a free HackerEarth API key**
@@ -112,6 +146,17 @@ Restart Claude Desktop, then try: *"run this Python program and tell me what it 
 5. HackerEarth runs the code in a sealed sandbox on their machines.
 6. The server hands the output back to the assistant, which explains it to you.
 
+
+## Screenshots
+
+
+## Code style
+No explicit linting or formatting tools are configured. The code follows standard PEP 8 conventions as observed in the source files.
+
+
+## Build status
+[![Tests](https://github.com/pratham-jain33/hackerearth-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/pratham-jain33/hackerearth-mcp/actions)
+
 ## Example session
 
 ```
@@ -144,3 +189,26 @@ MIT © Pratham Jain. See [LICENSE](LICENSE).
 ## Acknowledgments
 
 Built on [HackerEarth's](https://www.hackerearth.com) code execution API and the [Model Context Protocol](https://modelcontextprotocol.io/). Thanks to HackerEarth for a genuinely developer-friendly free tier.
+
+
+## Tests
+The repository includes a local test script `test_local.py`. To run the tests:
+```bash
+pip install fastmcp requests
+python test_local.py
+```
+The GitHub Actions workflow `test.yml` executes the same commands on each push/pull request.
+
+
+## API reference
+- `run_code(code: str, language: str) -> str`
+  Executes the supplied `code` in the specified `language` on HackerEarth and returns the program's printed output or error messages.
+- `list_languages() -> str`
+  Returns a newline‑separated list of all supported language identifiers (e.g., `PYTHON3`, `JAVASCRIPT_NODE`).
+- `_normalize_language(lang: str) -> str` (internal)
+  Normalizes user‑provided language names or aliases to the exact HackerEarth identifiers.
+- MCP registration is performed via `FastMCP("hackerearth-mcp")` which automatically registers the two tools above.
+
+---
+
+*Created with [repo-doctor](https://prathamjain.com/projects/repo-doctor)*
